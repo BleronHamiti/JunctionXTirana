@@ -1,0 +1,91 @@
+.mode-switcher-container{
+    border:0;
+    background: none;
+}
+
+.shared-footer .mode-switcher-container .mode-switch{
+    border:1px solid #fff;
+    display: flex;
+    border-radius: max(20px, 1vw);
+    width: fit-content;
+    .icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding:max(3px, 0.2vw) max(12px, 0.9vw);
+        color:#fff;
+        cursor: pointer;
+        font-size: max(15px, 1vw);
+        border-radius: max(20px, 1vw);
+    }
+    .icon1 {
+        background: #fff;
+        color:#0A0044;
+    }
+}
+body.dark-mode .shared-footer .mode-switcher-container .mode-switch{
+    .icon2{
+        background: #fff;
+        color:#0A0044;
+    }
+    .icon1{
+        background: none;
+        color:#fff;
+    }
+}
+
+.nav .mode-switcher-container .mode-switch{
+    border:1px solid #fff;
+    display: flex;
+    border-radius: max(20px, 1vw);
+    width: fit-content;
+    margin:0 max(12.5px, 1vw);
+    .icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding:max(3px, 0.2vw) max(10px, 0.8vw);
+        color:#fff;
+        cursor: pointer;
+        font-size: max(14px, 0.9vw);
+        border-radius: max(20px, 1vw);
+    }
+    .icon1{
+        background: #fff;
+        color: var(--main-color);
+    }
+}
+.nav__sticky .mode-switcher-container .mode-switch{
+    border:1px solid #ddd;
+    .icon{
+        color: #ddd;
+        background: none !important;
+    }
+    .icon1{
+        color: var(--main-color);
+        box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+        @media(max-width:1475px){
+            box-shadow: rgba(0, 0, 0, 0.15) 1.5px 1.5px 2px;
+        }
+    }
+}
+body.dark-mode .nav .mode-switcher-container .mode-switch{
+    .icon2{
+        background: #fff;
+        color: var(--main-color);
+    }
+    .icon1{
+        background: none;
+        color:#fff;
+    }
+}
+body.dark-mode .nav__sticky .mode-switcher-container .mode-switch{
+    .icon1{
+        color: #fff;
+        box-shadow: none;
+    }
+    .icon2{
+        background: rgba(var(--main-color-rgb), 0.35) !important;
+        color:#fff;
+    }
+}

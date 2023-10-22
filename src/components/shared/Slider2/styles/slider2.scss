@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+.shared-our-blog {
+  margin: max(55px, 7.5%) 0;
+  padding: 0 7.5%;
+  .centered-text {
+    text-align: center;
+    position: relative;
+    top: max(-70px, -5vw);
+    font-family: "Prompt", sans-serif;
+  }
+  .shared-text {
+    margin: max(10px, 0.8vw) 0 max(27.5px, 2.5vw);
+  }
+  .item {
+    border: 2px solid white;
+    border-radius: max(10px, 1vw);
+    overflow: hidden;
+    margin-bottom: max(25px, 2.5vw);
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+  
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 0;
+      height: 6px;
+      background: #000080;
+      transition: 0.35s ease-in-out;
+      -webkit-transition: 0.35s ease-in-out;
+      z-index: 2;
+    }
+    &:hover:before {
+      width: 100%;
+      @media (max-width: 768px) {
+        width: 0;
+      }
+    }
+
+    &:hover{
+      .img{
+        transform: scale(1.1);
+      }
+    }
+  }
+  .img-container {
+    position: relative;
+    border-radius: max(10px, 1vw);
+    margin-left: -120px;
+  }
+  .img {
+    width: 75%;
+    transition: 0.35s ease-in-out;
+    -webkit-transition: 0.35s ease-in-out;
+    @media (max-width:2700px){
+      margin-left: 10rem;
+    }
+    @media (max-width:1900px){
+      margin-left: 4rem;
+    }
+  }
+  
+  .bottom {
+    flex: 1;
+    padding: max(15px, 1.5vw);
+  }
+
+   h6 {
+   padding-left: -100px !important;
+  }
+  .purple {
+    color: #ee6edb;
+    background: #fad2ed;
+    font-size: 15px;
+    width: 50%;
+    height: 2.5rem;
+    border-radius: 13px;
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Chakra Petch', sans-serif;
+    margin-left: -50px;
+  }
+
+  
+  .red {
+    color: #de4343;
+    background: #f7cece;
+    font-size: 15px;
+    width: 50%;
+    height: 2.5rem;
+    border-radius: 13px;
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Chakra Petch', sans-serif;
+  }
+  .gray {
+    color: #2a509e;
+    background: #ccd5e8;
+    font-size: 15px;
+    width: 50%;
+    height: 2.5rem;
+    border-radius: 13px;
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Chakra Petch', sans-serif;
+  }
+
+ 
+}
+.rec-pagination {
+  display: none !important;
+}
+@media only screen and (max-width: 1150px)  {
+  .shared-our-blog {
+    padding: 0 5%;
+    .item {
+      width: 95%;
+    }
+    .img{
+      margin-left: 2.4rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .shared-our-blog {
+    padding: 0 3%;
+    h1,
+    .shared-text {
+      padding: 0 4%;
+    }
+    .item {
+      width: 98%;
+    }
+    .bottom {
+      padding: 20px;
+    }
+    .rec-pagination {
+      display: none !important;
+    }
+    
+  }
+}
+
+body.dark-mode {
+  .shared-our-blog .centered-text{
+    color: white;
+  }
+  .shared-our-blog .item{
+    background-color: #363842;
+    border:2px solid #2f3139 ;
+  }
+  .shared-our-blog .item .img-container .img{
+    margin-left:55px;
+    margin-top: 30px;
+  }
+  .item .bottom h6 .purple{
+    background: #5d5f68;
+    color: white;
+  }
+  .item .bottom h6 .red{
+    background: #5d5f68;
+    color: white;
+  }
+  .item .bottom h6 .gray{
+    background: #5d5f68;
+    color: white;
+  }
+
+  .shared-our-blog .item .slider2H1, .slider2P, .read-more{
+    color: white;
+  }
+
+  .shared-our-blog .centered-item .hover-button{
+    background-color: orangered;
+    color: white;
+  }
+}

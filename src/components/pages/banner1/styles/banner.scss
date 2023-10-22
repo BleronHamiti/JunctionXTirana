@@ -1,0 +1,45 @@
+.home-page {
+  overflow: hidden;
+}
+
+.home-page .banner {
+  // background: #92c4d7;
+  padding: max(150px, 12.5%) 5% max(90px, 9%);
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(rgba(#000080, 0.5), rgba(#87ceeb, 0.48)),
+    url("../../../../assets/Home/pic.jpeg");
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+
+  clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+  .main {
+    width: 50%;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: max(25px, 3.35vw);
+    color: white;
+    font-family: "Chakra Petch", sans-serif;
+  }
+  p {
+    font-size: max(15px, 1.1vw);
+    color: white;
+    margin: max(15px, 1.5vw) 0 max(22.5px, 2.25vw);
+  }
+  a {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page .banner {
+    background-attachment: unset !important;
+    clip-path: polygon(100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
+    .main {
+      width: 100%;
+    }
+  }
+}

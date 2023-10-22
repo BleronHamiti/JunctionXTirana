@@ -1,0 +1,65 @@
+.color-switch-container{
+    display: flex;
+    .color{
+        width: max(22.5px, 1.85vw);
+        height: max(22.5px, 1.85vw);
+        margin:max(4px, 0.3vw);
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+        @media(max-width:1020px){
+            width: 28px;
+            height: 28px;
+            margin: 6px;
+        }
+    }
+    .circle2{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        left:0;
+        border-radius: 50%;
+        display: none;
+        border:max(2px, 0.2vw) solid #fff;
+    }
+    .circle1{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+    .color1 .circle1{ background: #8035A0; }
+    .color2 .circle1{ background: #219268; }
+    .color3 .circle1{ background: #C11B36; }
+    .color4 .circle1{ background: #1B74EE; }
+    .color1 .circle2{
+        display: block;
+    }
+}
+
+body.theme-green .color-switch-container{ 
+    .color1 .circle2{
+        display: none;
+    }
+    .color2 .circle2{
+        display: block;
+    }
+}
+
+body.theme-red .color-switch-container{ 
+    .color1 .circle2{
+        display: none;
+    }
+    .color3 .circle2{
+        display: block;
+    }
+}
+
+body.theme-blue .color-switch-container{ 
+    .color1 .circle2{
+        display: none;
+    }
+    .color4 .circle2{
+        display: block;
+    }
+}

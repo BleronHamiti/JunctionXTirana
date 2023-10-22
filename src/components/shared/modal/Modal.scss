@@ -1,0 +1,32 @@
+.modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+}
+.modal-body p{
+    margin-top: 20px;
+}
+.modal-buttons{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-buttons button{
+    background-color: darkblue;
+    padding: 10px;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
