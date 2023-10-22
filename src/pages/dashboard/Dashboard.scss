@@ -44,13 +44,13 @@ body {
   margin-bottom: 40px;
 }
 /*---------Hero-------*/
-.hero{
+.hero {
   height: 60vh;
   display: flex;
   justify-content: center;
   align-items: flex;
 }
-.hero-text{
+.hero-text {
   width: 500px;
   margin-top: 50px;
 }
@@ -157,6 +157,16 @@ body {
   height: 10px;
   border-radius: 50%;
 }
+.emerald-rank {
+  z-index: 5;
+  position: absolute;
+  top: 38px;
+  left: 850px;
+  background-color:green;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
 
 /*Aeroplani ne progress bar*/
 .icon {
@@ -198,6 +208,16 @@ body {
   left: 615px;
   color: white;
   background-color: #ffd700;
+  padding: 4px;
+  font-size: 18px;
+  border-radius: 7px;
+}
+.emerald-point {
+  position: absolute;
+  top: 4px;
+  left: 815px;
+  color: white;
+  background-color:green;
   padding: 4px;
   font-size: 18px;
   border-radius: 7px;
@@ -253,7 +273,7 @@ body {
   height: 180px;
   border-radius: 50%;
   border: solid 1px black;
-  background-image: url('../../assets/medals/bronz-medal.png');
+  background-image: url("../../assets/medals/bronz-medal.png");
   background-position: center;
   background-size: cover;
 }
@@ -268,7 +288,7 @@ body {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  background-image: url('../../assets/medals/silver-medal.png');
+  background-image: url("../../assets/medals/silver-medal.png");
   background-position: center;
   background-size: cover;
 }
@@ -278,7 +298,7 @@ body {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  background-image: url('../../assets//medals/gold-medal.png');
+  background-image: url("../../assets//medals/gold-medal.png");
   background-position: center;
   background-size: cover;
 }
@@ -288,13 +308,13 @@ body {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  background-image: url('../../assets//medals/emerald-medal.png');
+  background-image: url("../../assets//medals/emerald-medal.png");
   background-position: center;
   background-size: calc(250%);
 }
-.unavailable{
+.unavailable {
   opacity: 0.4;
-  background-color:grey;
+  background-color: grey;
   border-radius: 20px;
 }
 
@@ -302,21 +322,21 @@ body {
   overflow: hidden;
 }
 
-.div-01{
+.div-01 {
   display: flex;
   justify-content: space-around;
   margin-top: -60px;
-  img{
+  img {
     width: 400px;
     height: 400px;
   }
 }
 
-.fff{
+.fff {
   text-align: center;
   margin-bottom: 20px;
 }
- .banner {
+.banner {
   // background: #92c4d7;
   padding: max(150px, 12.5%) 5% max(90px, 9%);
   text-align: center;
@@ -330,13 +350,13 @@ body {
   .main {
     width: 50%;
     margin: 0 auto;
-    .divv{
+    .divv {
       margin-left: 120px;
       display: flex;
       width: 60%;
       justify-content: center;
     }
-    a{
+    a {
       background-color: #3c3cd4;
       padding: 10px 20px;
       color: white;
@@ -366,4 +386,36 @@ body {
       width: 100%;
     }
   }
+}
+.modal-wrapper {
+  width: 300px;
+  padding: 20px;
+  margin-top: 50px;
+  border: 1px solid grey;
+  border-radius: 20px;
+}
+
+.modal div p {
+  margin-left: 10px;
+}
+.label {
+  font-size: 21px;
+  text-align: center;
+}
+.modal-wrapper button {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: darkblue;
+  color: white;
+  outline: none;
+  border: none;
+  border: 1px solid blue;
+  border-radius: 10px;
+}
+.modal {
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-around;
 }

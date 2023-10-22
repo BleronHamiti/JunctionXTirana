@@ -15,7 +15,7 @@ import {
 // import goldMedal from "../../assets/medals/gold-medal.png";
 // import emeraldMedal from "../../assets/medals/emerald-medal.png";
 import "./Dashboard.scss";
-import { motion } from "framer-motion";
+import { motion, progress } from "framer-motion";
 import img1 from "../../assets/Home/5.png";
 import img2 from "../../assets/Home/15.png";
 import img3 from "../../assets/Home/35.png";
@@ -71,14 +71,15 @@ const Dashboard = () => {
       .then((data) => {
         if (data.status === "success") {
           setKilometers(kilometers + data.addedKilometers);
-          setPercentage(((kilometers + data.addedKilometers) / 50000) * 100);
+          setPercentage(((kilometers + data.addedKilometers) / 50000) * 1000);
           setShowModal(false);
         }
       })
       .catch((error) => console.error("Error updating kilometers:", error));
   };
 
-  const iconProgress = percentage < 10 ? percentage - 20 : percentage - 650; //Logjika aeroplanit
+  
+  const iconProgress = percentage < 10 ? percentage - 630 : percentage - 650; //Logjika aeroplanit
   return (
     <>
       <div className="banner">
@@ -149,9 +150,11 @@ const Dashboard = () => {
           <div className="bronze-point">Bronze</div>
           <div className="silver-point">Silver</div>
           <div className="gold-point">Gold</div>
+          <div className="emerald-point">Emerald</div>
           <div className="bronze-rank"></div>
           <div className="silver-rank"></div>
           <div className="gold-rank"></div>
+          <div className="emerald-rank"></div>
           <motion.div animate={{ x: iconProgress + "px" }}>
             <FaPlane className="icon" />
           </motion.div>
@@ -162,6 +165,26 @@ const Dashboard = () => {
             >
               <div className="skeleton-progress"></div>
             </motion.div>
+          </div>
+          <div className="modal-wrapper">
+            <div className="label">{kilometers} km traveled</div>
+            <button onClick={() => setShowModal(true)}>Book Now</button>
+
+            {showModal && (
+              <div className="modal">
+                <div>
+                  <br />
+                  <p>
+                    Book from JFK{flight.origin} to LHR{flight.destination}
+                  </p>
+                  <br />
+                  <div className="button-wrapper">
+                    <button onClick={handleBooking}>Confirm Booking</button>
+                    <button onClick={() => setShowModal(false)}>Close</button>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -197,20 +220,6 @@ const Dashboard = () => {
           </div> */}
           </motion.div>
         </div>
-        <div className="label">{kilometers} km traveled</div>
-        <button onClick={() => setShowModal(true)}>Book Now</button>
-
-        {showModal && (
-          <div className="modal">
-            <h2>Flight Booking</h2>
-            <p>
-              Book from {flight.origin} to {flight.destination}
-            </p>
-            <button onClick={handleBooking}>Confirm Booking</button>
-            <button onClick={() => setShowModal(false)}>Close</button>
-            {user}
-          </div>
-        )}
         <div className="rewards">
           <div className="bronz-rewards">
             <div className="rewards-table">
