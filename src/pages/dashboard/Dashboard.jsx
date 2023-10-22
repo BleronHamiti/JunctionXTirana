@@ -157,7 +157,7 @@ const Dashboard = () => {
           </motion.div>
           <div className="progress-bar">
             <motion.div
-              animate={{ width: 10 * { percentage } + "px" }}
+              animate={{ width: percentage + "px" }}
               className="progress-bar__content"
             >
               <div className="skeleton-progress"></div>
@@ -197,6 +197,20 @@ const Dashboard = () => {
           </div> */}
           </motion.div>
         </div>
+        <div className="label">{kilometers} km traveled</div>
+        <button onClick={() => setShowModal(true)}>Book Now</button>
+
+        {showModal && (
+          <div className="modal">
+            <h2>Flight Booking</h2>
+            <p>
+              Book from {flight.origin} to {flight.destination}
+            </p>
+            <button onClick={handleBooking}>Confirm Booking</button>
+            <button onClick={() => setShowModal(false)}>Close</button>
+            {user}
+          </div>
+        )}
         <div className="rewards">
           <div className="bronz-rewards">
             <div className="rewards-table">
@@ -234,20 +248,6 @@ const Dashboard = () => {
               percentage < 500 ? "bronz-rewards" : "bronz-rewards unavailable"
             }
           >
-            <div className="label">{kilometers} km traveled</div>
-            <button onClick={() => setShowModal(true)}>Book Now</button>
-
-            {showModal && (
-              <div className="modal">
-                <h2>Flight Booking</h2>
-                <p>
-                  Book from {flight.origin} to {flight.destination}
-                </p>
-                <button onClick={handleBooking}>Confirm Booking</button>
-                <button onClick={() => setShowModal(false)}>Close</button>
-                {user}
-              </div>
-            )}
             <div className="rewards-table">
               <FaRegCircle className="rewards-icon" />
               <h1>Gold Card</h1>

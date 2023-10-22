@@ -1,28 +1,29 @@
 import "./Login.scss";
 import React, { useState } from "react";
-import { BiEnvelope, BiUser } from "react-icons/bi";
+import { BiEnvelope } from "react-icons/bi";
 import { BiLockAlt } from "react-icons/bi";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { FormattedMessage } from "react-intl";
-import flyingAirplane from '../../../assets/Home/Flying-Airplane.gif'
-function Login() {
+import loginlogo from "../../../assets/Home/login.jpg";
+
+function Login2() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   return (
-    <div className="div-login">
-      <div className="div-img">
-        <img src={flyingAirplane} className="imgLogin" alt="imgLogin" />
-      </div>
+    <div className="div-login2">
       <div className="form-container">
         <br />
         <br />
         <h1 className="driveS">
-          <FormattedMessage
-            id="create-acc"
-            defaultMessage="Login"
-          />
+          <FormattedMessage id="log-in" defaultMessage="Log in" />
         </h1>
+        <br></br>
+        <p className="driveww">
+          <FormattedMessage
+            id="i-have a car"
+            defaultMessage="Welcome back to your account"
+          />
+        </p>
         <p className="driveww"></p>
         <form action="">
           <div className="input-container">
@@ -36,7 +37,7 @@ function Login() {
                 name="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email Address"
+                placeholder="Email"
                 required
               />
             </div>
@@ -56,25 +57,42 @@ function Login() {
                 required
               />
 
-             <span className="span1">
-              <AiOutlineEyeInvisible />
-            </span>
+              <span className="span1">
+                <AiOutlineEyeInvisible />
+              </span>
             </div>
           </div>
-          <button type="submit" className="main-button">
-            Login
+          <br></br>
+          <p className="forgot-pass">
+            <FormattedMessage
+              id="forgot-pass"
+              defaultMessage="Forgot Password ?"
+            />
+          </p>
+          <br></br>
+          <div className="remember-me-div">
+            <input type="radio" value="Remember me" />
+            <p className="p-div">Remember me</p>
+          </div>
+          <br></br>
+          <br></br>
+          <button type="" className="main-button">
+            <a href="/dashboard">Log In</a>
           </button>
           <br></br>
           <br></br>
-          <center><p className="register-acc">Dont have an account? <span className="register">Register</span></p></center>
-        
+          <center>
+            <p className="register-acc">
+              Don't have an account? <span className="register"><a href="/signup">Register</a></span>
+            </p>
+          </center>
+          <center>
+            <a href="/"className="cont-with">Back Home</a>
+          </center>
         </form>
       </div>
-      <div className="left-container">
-     
-      </div>
     </div>
-  )
+  );
 }
 
-export default Login;
+export default Login2;
