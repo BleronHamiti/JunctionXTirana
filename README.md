@@ -11,28 +11,37 @@ Before you begin, ensure you have the following installed:
 Node.js
 PHP
 Composer (for PHP dependency management)
-Installation
+
+# Installation
 Clone the repository:
-bash
+
 git clone https://github.com/BleronHamiti/JunctionXTirana.git
 Navigate to the project directory:
 
 
 cd JunctionXTirana
+
 Install the necessary Node.js packages:
 
 npm install
+
 Set up the PHP backend (ensure Composer is installed):
 
 
 Navigate to the PHP directory if separate from the root
+
 cd backend
+
 composer install
-Running the Application
+
+# Running the Application
+
 To run the application in a development environment:
 
 cd ..
+
 npm run dev
+
 This command will start both the React frontend and the PHP backend servers, typically accessible via localhost on your web browser.
 
 # Contributing
